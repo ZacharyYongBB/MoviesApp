@@ -19,7 +19,6 @@
 		B6B5379A2BBBEE27005AAFC4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B6B537992BBBEE27005AAFC4 /* FirebaseAuth */; };
 		B6B5379C2BBBEE55005AAFC4 /* AuthDataResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B5379B2BBBEE55005AAFC4 /* AuthDataResModel.swift */; };
 		B6B5379E2BBBEE9D005AAFC4 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B5379D2BBBEE9D005AAFC4 /* UserManager.swift */; };
-		B6B537A02BBBEED7005AAFC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B5379F2BBBEED7005AAFC4 /* GoogleService-Info.plist */; };
 		B6B537A72BBBEFE8005AAFC4 /* HomeButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537A22BBBEFE8005AAFC4 /* HomeButtonViewModifier.swift */; };
 		B6B537A82BBBEFE8005AAFC4 /* OptionButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537A32BBBEFE8005AAFC4 /* OptionButtonViewModifier.swift */; };
 		B6B537A92BBBEFE8005AAFC4 /* TextFieldViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537A42BBBEFE8005AAFC4 /* TextFieldViewModifier.swift */; };
@@ -27,6 +26,11 @@
 		B6B537B22BBBF10C005AAFC4 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537B12BBBF10C005AAFC4 /* MovieListView.swift */; };
 		B6B537B42BBBF119005AAFC4 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537B32BBBF119005AAFC4 /* MovieDetailView.swift */; };
 		B6B537B62BBBF5D3005AAFC4 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537B52BBBF5D3005AAFC4 /* MovieViewModel.swift */; };
+		B6B537B82BBBFD27005AAFC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537B72BBBFD27005AAFC4 /* NetworkManager.swift */; };
+		B6B537BB2BBBFDD6005AAFC4 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537BA2BBBFDD6005AAFC4 /* ErrorMessage.swift */; };
+		B6B537BF2BBC035C005AAFC4 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537BE2BBC035C005AAFC4 /* MovieModel.swift */; };
+		B6B537C12BBC0CE5005AAFC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B537C02BBC0CE5005AAFC4 /* GoogleService-Info.plist */; };
+		B6B537C32BBC1C8D005AAFC4 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B537C22BBC1C8D005AAFC4 /* APIKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +44,6 @@
 		B6B537922BBBED5B005AAFC4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		B6B5379B2BBBEE55005AAFC4 /* AuthDataResModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResModel.swift; sourceTree = "<group>"; };
 		B6B5379D2BBBEE9D005AAFC4 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		B6B5379F2BBBEED7005AAFC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6B537A22BBBEFE8005AAFC4 /* HomeButtonViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeButtonViewModifier.swift; sourceTree = "<group>"; };
 		B6B537A32BBBEFE8005AAFC4 /* OptionButtonViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionButtonViewModifier.swift; sourceTree = "<group>"; };
 		B6B537A42BBBEFE8005AAFC4 /* TextFieldViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifier.swift; sourceTree = "<group>"; };
@@ -48,6 +51,11 @@
 		B6B537B12BBBF10C005AAFC4 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		B6B537B32BBBF119005AAFC4 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		B6B537B52BBBF5D3005AAFC4 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		B6B537B72BBBFD27005AAFC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B6B537BA2BBBFDD6005AAFC4 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		B6B537BE2BBC035C005AAFC4 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		B6B537C02BBC0CE5005AAFC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B6B537C22BBC1C8D005AAFC4 /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,8 @@
 		B6B5376B2BBBEAC5005AAFC4 = {
 			isa = PBXGroup;
 			children = (
-				B6B5379F2BBBEED7005AAFC4 /* GoogleService-Info.plist */,
+				B6B537C02BBC0CE5005AAFC4 /* GoogleService-Info.plist */,
+				B6B537C22BBC1C8D005AAFC4 /* APIKeys.plist */,
 				B6B537762BBBEAC5005AAFC4 /* MoviesApp */,
 				B6B537752BBBEAC5005AAFC4 /* Products */,
 			);
@@ -84,6 +93,7 @@
 		B6B537762BBBEAC5005AAFC4 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				B6B537B92BBBFDCA005AAFC4 /* Utilities */,
 				B6B537AB2BBBF076005AAFC4 /* Root */,
 				B6B537A52BBBEFE8005AAFC4 /* ViewModifiers */,
 				B6B537872BBBEB24005AAFC4 /* Services */,
@@ -118,6 +128,7 @@
 			children = (
 				B6B537922BBBED5B005AAFC4 /* AuthManager.swift */,
 				B6B5379D2BBBEE9D005AAFC4 /* UserManager.swift */,
+				B6B537B72BBBFD27005AAFC4 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -212,8 +223,17 @@
 		B6B537B02BBBF0D6005AAFC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B6B537BE2BBC035C005AAFC4 /* MovieModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B6B537B92BBBFDCA005AAFC4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B6B537BA2BBBFDD6005AAFC4 /* ErrorMessage.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6B537A02BBBEED7005AAFC4 /* GoogleService-Info.plist in Resources */,
 				B6B5377F2BBBEAC6005AAFC4 /* Preview Assets.xcassets in Resources */,
+				B6B537C32BBC1C8D005AAFC4 /* APIKeys.plist in Resources */,
 				B6B5377C2BBBEAC6005AAFC4 /* Assets.xcassets in Resources */,
+				B6B537C12BBC0CE5005AAFC4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,12 +322,15 @@
 				B6B5379E2BBBEE9D005AAFC4 /* UserManager.swift in Sources */,
 				B6B5379C2BBBEE55005AAFC4 /* AuthDataResModel.swift in Sources */,
 				B6B537B62BBBF5D3005AAFC4 /* MovieViewModel.swift in Sources */,
+				B6B537BF2BBC035C005AAFC4 /* MovieModel.swift in Sources */,
 				B6B537B22BBBF10C005AAFC4 /* MovieListView.swift in Sources */,
 				B6B5378F2BBBEBA0005AAFC4 /* SignUpView.swift in Sources */,
 				B6B537B42BBBF119005AAFC4 /* MovieDetailView.swift in Sources */,
 				B6B537782BBBEAC5005AAFC4 /* MoviesApp.swift in Sources */,
 				B6B537932BBBED5B005AAFC4 /* AuthManager.swift in Sources */,
 				B6B537A72BBBEFE8005AAFC4 /* HomeButtonViewModifier.swift in Sources */,
+				B6B537BB2BBBFDD6005AAFC4 /* ErrorMessage.swift in Sources */,
+				B6B537B82BBBFD27005AAFC4 /* NetworkManager.swift in Sources */,
 				B6B537A92BBBEFE8005AAFC4 /* TextFieldViewModifier.swift in Sources */,
 				B6B537AC2BBBF076005AAFC4 /* RootView.swift in Sources */,
 			);

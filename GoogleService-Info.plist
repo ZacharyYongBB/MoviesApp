@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBf8KsQH4m6FSJMI3UjRmNGIAcBjOO48lE</string>
+	<string>AIzaSyDHarJDu0hIcE6KKPx-BJzXkpvPRJYYqi4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>885766721451</string>
+	<string>327335089367</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.zachary.CTQuizMaster</string>
+	<string>com.zachary.MoviesApp</string>
 	<key>PROJECT_ID</key>
-	<string>quizmaster-4b059</string>
+	<string>movieapp-b5734</string>
 	<key>STORAGE_BUCKET</key>
-	<string>quizmaster-4b059.appspot.com</string>
+	<string>movieapp-b5734.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:885766721451:ios:102595484f839308340cee</string>
+	<string>1:327335089367:ios:a97005f439108acbaccc92</string>
 </dict>
 </plist>

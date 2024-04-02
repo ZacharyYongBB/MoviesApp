@@ -11,10 +11,18 @@ struct MovieListView: View {
     
     @StateObject private var vm = MovieViewModel()
     @Binding var showSignInView: Bool
+    @State var movies: [MovieModel]?
     
     var body: some View {
         VStack {
             Text("movie list")
+            if let movies = movies {
+                ForEach(movies, id: \.imdbID) { movie in
+                    Text(movie.title ?? "Unknown Title")
+                }
+            } else {
+                Text("No movies found")
+            }
             Button {
                 Task {
                     do {
@@ -25,8 +33,16 @@ struct MovieListView: View {
                     }
                 }
             } label: {
-                Text(LocalizedStringKey("logOut"))
+                Text("logOut")
             }
+            Button {
+                Task {
+                    movies = await vm.searchMovie(search: "marvel")
+                }
+            } label: {
+                Text("download marvel")
+            }
+            
         }
     }
 }
