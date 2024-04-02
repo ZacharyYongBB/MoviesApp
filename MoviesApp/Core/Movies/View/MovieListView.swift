@@ -21,12 +21,14 @@ struct MovieListView: View {
     var body: some View {
         VStack {
             if !InternetConnectionManager.shared.isConnected {
-                List(vm.savedMovies, id: \.imdbID) { movie in
-                    NavigationLink(destination: MovieDetailView(movieID: movie.imdbID ?? "")) {
-                        MovieItemView(movie: movie)
+                List {
+                    ForEach(vm.savedMovies, id: \.imdbID) { movie in
+                        NavigationLink(destination: MovieDetailView(movieID: movie.imdbID ?? "")) {
+                            MovieItemView(movie: movie)
+                        }
                     }
+                    .onDelete(perform: vm.deleteMovie)
                 }
-                
             } else if vm.moviesList.isEmpty && searchTitle == "" {
                 VStack (spacing: 20) {
                     Image(systemName: "magnifyingglass.circle")

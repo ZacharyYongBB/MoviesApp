@@ -93,6 +93,32 @@ final class MovieViewModel: ObservableObject {
         }
     }
     
+    func deleteMovie(at indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let movieToRemove = savedMovies[index]
+            guard let imdbID = movieToRemove.imdbID else {
+                return
+            }
+            let request = NSFetchRequest<MovieEntity>(entityName: "MovieEntity")
+            request.predicate = NSPredicate(format: "imdbID == %@", imdbID)
+            
+            do {
+                if let movieEntity = try container.viewContext.fetch(request).first {
+                    container.viewContext.delete(movieEntity)
+                }
+            } catch {
+                print("Error deleting movie from Core Data: \(error)")
+            }
+        }
+        
+        do {
+            try container.viewContext.save()
+            fetchCoreDataMovies()
+        } catch {
+            print("Error saving after deleting from Core Data: \(error)")
+        }
+    }
+    
     func logOut() throws {
         try AuthManager.shared.signOut()
     }
