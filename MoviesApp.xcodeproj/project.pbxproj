@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6978AAA2BBC8E4E00BCA0A0 /* InternetConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6978AA92BBC8E4E00BCA0A0 /* InternetConnectionManager.swift */; };
 		B6B537782BBBEAC5005AAFC4 /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537772BBBEAC5005AAFC4 /* MoviesApp.swift */; };
 		B6B5377C2BBBEAC6005AAFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B5377B2BBBEAC6005AAFC4 /* Assets.xcassets */; };
 		B6B5377F2BBBEAC6005AAFC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B5377E2BBBEAC6005AAFC4 /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6978AA92BBC8E4E00BCA0A0 /* InternetConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionManager.swift; sourceTree = "<group>"; };
 		B6B537742BBBEAC5005AAFC4 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B537772BBBEAC5005AAFC4 /* MoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApp.swift; sourceTree = "<group>"; };
 		B6B5377B2BBBEAC6005AAFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				B6B537922BBBED5B005AAFC4 /* AuthManager.swift */,
 				B6B5379D2BBBEE9D005AAFC4 /* UserManager.swift */,
 				B6B537B72BBBFD27005AAFC4 /* NetworkManager.swift */,
+				B6978AA92BBC8E4E00BCA0A0 /* InternetConnectionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				B6B537A82BBBEFE8005AAFC4 /* OptionButtonViewModifier.swift in Sources */,
 				B6B5379E2BBBEE9D005AAFC4 /* UserManager.swift in Sources */,
 				B6B5379C2BBBEE55005AAFC4 /* AuthDataResModel.swift in Sources */,
+				B6978AAA2BBC8E4E00BCA0A0 /* InternetConnectionManager.swift in Sources */,
 				B6B537B62BBBF5D3005AAFC4 /* MovieViewModel.swift in Sources */,
 				B6B537C62BBC4E7F005AAFC4 /* MovieItemView.swift in Sources */,
 				B6B537C82BBC5B62005AAFC4 /* MovieDetailsViewModel.swift in Sources */,

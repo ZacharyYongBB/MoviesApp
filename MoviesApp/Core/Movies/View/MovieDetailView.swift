@@ -16,7 +16,9 @@ struct MovieDetailView: View {
     
     var body: some View {
         VStack {
-            if movie != nil {
+            if !InternetConnectionManager.shared.isConnected {
+                Text("Please on your internet, I did not cache the movie details")
+            } else if movie != nil {
                 movieDetailSection
             } else if let error = error {
                 Text("Error: \(error.localizedDescription)")

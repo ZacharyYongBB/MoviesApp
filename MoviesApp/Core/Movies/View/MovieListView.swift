@@ -20,7 +20,14 @@ struct MovieListView: View {
     
     var body: some View {
         VStack {
-            if vm.moviesList.isEmpty && searchTitle == "" {
+            if !InternetConnectionManager.shared.isConnected {
+                List(vm.savedMovies, id: \.imdbID) { movie in
+                    NavigationLink(destination: MovieDetailView(movieID: movie.imdbID ?? "")) {
+                        MovieItemView(movie: movie)
+                    }
+                }
+                
+            } else if vm.moviesList.isEmpty && searchTitle == "" {
                 VStack (spacing: 20) {
                     Image(systemName: "magnifyingglass.circle")
                         .font(.system(size: 150))
