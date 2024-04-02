@@ -43,7 +43,35 @@ class NetworkManager {
             throw ErrorMessage.invalidData
         }
         
+    }
+    
+    
+    func searchMovieId(searchId: String) async throws -> MovieDetailModel {
         
+        guard let apiKey = getApiKey() else {
+            throw ErrorMessage.missingApiKey
+        }
+        
+        let endPoint = baseUrl + apiKey + "&i=\(searchId)&plot=full"
+        
+        guard let url = URL(string: endPoint) else {
+            throw ErrorMessage.invalidURL
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw ErrorMessage.invalidResponse
+        }
+        
+        do {
+            let movieDetail = try decoder.decode(MovieDetailModel.self, from: data)
+            print("Decoding successful:", movieDetail)
+            return movieDetail
+        } catch {
+            print("Decoding error:", error)
+            throw ErrorMessage.invalidData
+        }
     }
     
     private func getApiKey() -> String? {
