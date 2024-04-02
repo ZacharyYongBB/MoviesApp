@@ -6,17 +6,46 @@
 //
 
 import Foundation
+import CoreData
 
 @MainActor
 final class MovieViewModel: ObservableObject {
     
-    func searchMovie(search: String) async -> [MovieModel] {
-        do {
-            let movies = try await NetworkManager.shared.searchMovies(search: search)
-            return movies
-        } catch {
-            return []
+    let container: NSPersistentContainer
+    @Published var moviesList: [MovieModel] = []
+    @Published var savedMovies: [MovieEntity] = []
+    
+    init() {
+        container = NSPersistentContainer(name: "MoviesContainer")
+        container.loadPersistentStores { description, error in
+            if let error = error {
+                print(error)
+            }
         }
+        fetchCoreDataMovies()
+    }
+    
+    func searchMovie(search: String) async throws {
+        do {
+            moviesList = try await NetworkManager.shared.searchMovies(search: search)
+        } catch {
+            throw error
+        }
+    }
+    
+    func fetchCoreDataMovies() {
+        let request = NSFetchRequest<MovieEntity>(entityName: "MovieEntity")
+        
+        do {
+            savedMovies = try container.viewContext.fetch(request)
+        } catch let error {
+            print("Error fetching from core data: \(error)")
+        }
+        
+    }
+    
+    func addMoviesIntoCoreData(movies: [MovieModel]) {
+        
     }
     
     func logOut() throws {

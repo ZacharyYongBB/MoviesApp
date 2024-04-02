@@ -16,7 +16,7 @@ struct MovieDetailView: View {
     
     var body: some View {
         VStack {
-            if let movie = movie {
+            if movie != nil {
                 movieDetailSection
             } else if let error = error {
                 Text("Error: \(error.localizedDescription)")

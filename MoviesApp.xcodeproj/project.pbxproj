@@ -36,6 +36,7 @@
 		B6B537CA2BBC5BDC005AAFC4 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537C92BBC5BDC005AAFC4 /* MovieDetailModel.swift */; };
 		B6B537CC2BBC6DCC005AAFC4 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537CB2BBC6DCC005AAFC4 /* PosterImageView.swift */; };
 		B6B537CE2BBC6E30005AAFC4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B537CD2BBC6E30005AAFC4 /* RatingView.swift */; };
+		B6B537D22BBC82C3005AAFC4 /* MoviesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6B537D02BBC82C3005AAFC4 /* MoviesContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		B6B537C92BBC5BDC005AAFC4 /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		B6B537CB2BBC6DCC005AAFC4 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
 		B6B537CD2BBC6E30005AAFC4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		B6B537D12BBC82C3005AAFC4 /* MoviesContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		B6B537762BBBEAC5005AAFC4 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				B6B537CF2BBC82A2005AAFC4 /* CoreData */,
 				B6B537B92BBBFDCA005AAFC4 /* Utilities */,
 				B6B537AB2BBBF076005AAFC4 /* Root */,
 				B6B537A52BBBEFE8005AAFC4 /* ViewModifiers */,
@@ -259,6 +262,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B6B537CF2BBC82A2005AAFC4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B6B537D02BBC82C3005AAFC4 /* MoviesContainer.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +361,7 @@
 				B6B537C82BBC5B62005AAFC4 /* MovieDetailsViewModel.swift in Sources */,
 				B6B537BF2BBC035C005AAFC4 /* MovieModel.swift in Sources */,
 				B6B537B22BBBF10C005AAFC4 /* MovieListView.swift in Sources */,
+				B6B537D22BBC82C3005AAFC4 /* MoviesContainer.xcdatamodeld in Sources */,
 				B6B537CE2BBC6E30005AAFC4 /* RatingView.swift in Sources */,
 				B6B5378F2BBBEBA0005AAFC4 /* SignUpView.swift in Sources */,
 				B6B537B42BBBF119005AAFC4 /* MovieDetailView.swift in Sources */,
@@ -597,6 +609,20 @@
 			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B6B537D02BBC82C3005AAFC4 /* MoviesContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B6B537D12BBC82C3005AAFC4 /* MoviesContainer.xcdatamodel */,
+			);
+			currentVersion = B6B537D12BBC82C3005AAFC4 /* MoviesContainer.xcdatamodel */;
+			name = MoviesContainer.xcdatamodeld;
+			path = /Users/zachary/Desktop/MoviesApp/MoviesApp/CoreData/MoviesContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B6B5376C2BBBEAC5005AAFC4 /* Project object */;
 }

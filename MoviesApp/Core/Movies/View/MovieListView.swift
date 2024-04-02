@@ -11,7 +11,6 @@ struct MovieListView: View {
     
     @StateObject private var vm = MovieViewModel()
     @Binding var showSignInView: Bool
-    @State var movies: [MovieModel] = []
     @State private var showAlert = false
     @State private var alertMessage = ""
     @State private var searchTitle = ""
@@ -21,14 +20,14 @@ struct MovieListView: View {
     
     var body: some View {
         VStack {
-            if movies.isEmpty && searchTitle == "" {
+            if vm.moviesList.isEmpty && searchTitle == "" {
                 VStack (spacing: 20) {
                     Image(systemName: "magnifyingglass.circle")
                         .font(.system(size: 150))
                     Text("Enter a search term")
                 }
                 .font(.title)
-            } else if movies.isEmpty && !searchTitle.isEmpty {
+            } else if vm.moviesList.isEmpty && !searchTitle.isEmpty {
                 VStack (spacing: 20) {
                     Image(systemName: "questionmark.bubble")
                         .font(.system(size: 150))
@@ -37,7 +36,7 @@ struct MovieListView: View {
                 }
                 .font(.title)
             } else {
-                List(movies, id: \.imdbID) { movie in
+                List(vm.moviesList, id: \.imdbID) { movie in
                     NavigationLink(destination: MovieDetailView(movieID: movie.imdbID ?? "")) {
                         MovieItemView(movie: movie)
                     }
@@ -68,12 +67,15 @@ struct MovieListView: View {
         })
         .onChange(of: searchTitle) {
             searchDebounceTimer?.invalidate()
-            
             searchDebounceTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
                 if !searchTitle.isEmpty {
                     searchTask?.cancel()
                     searchTask = Task {
-                        movies = await vm.searchMovie(search: searchTitle)
+                        do {
+                            try await vm.searchMovie(search: searchTitle)
+                        } catch {
+                            print("Error searching for movies: \(error)")
+                        }
                     }
                 }
             }
