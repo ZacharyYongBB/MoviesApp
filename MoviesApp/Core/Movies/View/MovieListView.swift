@@ -11,39 +11,52 @@ struct MovieListView: View {
     
     @StateObject private var vm = MovieViewModel()
     @Binding var showSignInView: Bool
-    @State var movies: [MovieModel]?
+    @State var movies: [MovieModel] = []
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    @State private var searchTitle = ""
+    @State private var searchTask: Task<Void, Never>?
+    
     
     var body: some View {
         VStack {
-            Text("movie list")
-            if let movies = movies {
-                ForEach(movies, id: \.imdbID) { movie in
-                    Text(movie.title ?? "Unknown Title")
-                }
-            } else {
-                Text("No movies found")
+            List(movies, id: \.imdbID) { movie in
+                MovieItemView(movie: movie)
             }
-            Button {
-                Task {
-                    do {
-                        try vm.logOut()
-                        showSignInView = true
-                    } catch {
-                        print("log out failed \(error)")
+        }
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarLeading) {
+                HStack {
+                    Image(systemName: "gear")
+                        .font(.headline)
+                    Button {
+                        Task {
+                            do {
+                                try vm.logOut()
+                                showSignInView = true
+                            } catch {
+                                showAlert = true
+                                alertMessage = "Log out failed: \(error)"                            }
+                        }
+                    } label: {
+                        Text("Log Out")
                     }
                 }
-            } label: {
-                Text("logOut")
+                
             }
-            Button {
-                Task {
-                    movies = await vm.searchMovie(search: "marvel")
-                }
-            } label: {
-                Text("download marvel")
-            }
-            
+        })
+        .task {
+            movies = await vm.searchMovie(search: "")
         }
+        .onChange(of: searchTitle) {
+            if !searchTitle.isEmpty {
+                searchTask?.cancel()
+                searchTask = Task {
+                    movies = await vm.searchMovie(search: searchTitle)
+                }
+            }
+        }
+        .searchable(text: $searchTitle, placement: .navigationBarDrawer, prompt: "Enter movie name")
     }
 }
 
